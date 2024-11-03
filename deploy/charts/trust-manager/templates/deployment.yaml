@@ -66,6 +66,7 @@ spec:
         ports:
         - containerPort: {{ .Values.app.webhook.port }}
         - containerPort: {{ .Values.app.metrics.port }}
+          name: metrics
         readinessProbe:
           httpGet:
             port: {{ .Values.app.readinessProbe.port }}
