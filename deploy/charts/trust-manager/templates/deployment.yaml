@@ -65,6 +65,7 @@ spec:
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
         - containerPort: {{ .Values.app.webhook.port }}
+          name: webhook
         - containerPort: {{ .Values.app.metrics.port }}
           name: metrics
         readinessProbe:
