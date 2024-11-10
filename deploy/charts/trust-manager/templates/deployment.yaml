@@ -65,9 +65,9 @@ spec:
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
         - containerPort: {{ .Values.app.webhook.port }}
-          name: webhook # for PodMonitor port field
+          name: webhook # for the PodMonitor port field
         - containerPort: {{ .Values.app.metrics.port }}
-          name: metrics # for PodMonitor port field
+          name: metrics # for the PodMonitor port field
         readinessProbe:
           httpGet:
             port: {{ .Values.app.readinessProbe.port }}
